@@ -1,10 +1,15 @@
-# hello-dropwizard
+# Selenium Grid Node - Chrome
 
-This is a demo [Dropwizard](http://www.dropwizard.io)
-app you can deploy to [Skyliner](https://www.skyliner.io). Here's a guide to getting started:
+Selenium Node configured to run Google Chrome.
 
-[https://www.skyliner.io/help/quick-start](https://www.skyliner.io/help/quick-start)
+## Dockerfile
 
-If you have any trouble, please drop us a line at [support@skyliner.io](mailto:support@skyliner.io?Subject=Help%20with%20hello-dropwizard).
+[`selenium/node-chrome` Dockerfile](https://github.com/SeleniumHQ/docker-selenium/blob/master/NodeChrome/Dockerfile)
 
-Repo created by [Skyliner](https://www.skyliner.io) app templates at 2017-01-23T00:53:27.897Z
+## How to use this image
+
+```
+./generate.sh 3.0.1-fermium
+docker build -t vcr-selenium-node .
+docker run --rm -i -t -d --link vcr-selenium:hub vcr-selenium-node
+```
