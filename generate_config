@@ -17,6 +17,7 @@ echo "
   \"port\": $NODE_PORT,
   \"register\": true,
   \"registerCycle\": $NODE_REGISTER_CYCLE,
-  \"remoteHost\": $NODE_REMOTE_HOST
+  \"remoteHost\": \"$NODE_REMOTE_HOST\"
+
 }" 
 
