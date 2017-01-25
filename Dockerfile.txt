@@ -12,7 +12,11 @@ USER root
 #       latest (equivalent to google-chrome-stable)
 #       google-chrome-beta  (pull latest beta)
 #============================================
-ARG CHROME_VERSION="google-chrome-stable"
+
+# Currently set to a random old version because of
+# https://github.com/elgalu/docker-selenium/issues/20
+# ARG[ghhhhh] is right!
+ARG CHROME_VERSION=41.0.2272.89
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \
@@ -41,8 +45,6 @@ ENV NODE_MAX_SESSION 1
 ENV NODE_REGISTER_CYCLE 5000
 ENV NODE_PORT 5555
 ENV HUB_PORT_4444_TCP_PORT 80
-
-VOLUME /dev/shm
 
 COPY generate_config /opt/selenium/generate_config
 RUN chmod +x /opt/selenium/generate_config
