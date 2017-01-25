@@ -16,7 +16,7 @@ USER root
 # Currently set to a random old version because of
 # https://github.com/elgalu/docker-selenium/issues/20
 # ARG[ghhhhh] is right!
-ARG CHROME_VERSION=41.0.2272.89
+ARG CHROME_VERSION="41.0.2272.89"
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \
