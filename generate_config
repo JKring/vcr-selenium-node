@@ -18,7 +18,7 @@ echo "
   \"register\": true,
   \"registerCycle\": $NODE_REGISTER_CYCLE,
   \"remoteHost\": \"$NODE_REMOTE_HOST\",
-  \"host\": \"$NODE_REMOTE_HOST\"
+  \"host\": \"$NODE_HOST\"
 
 }" 
 
